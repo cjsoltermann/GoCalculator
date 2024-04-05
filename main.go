@@ -16,6 +16,10 @@ func main() {
 		inputBytes := make([]byte, 64)
 		n, _ := os.Stdin.Read(inputBytes)
 		inputBytes = inputBytes[:n-2]
+
+		if len(inputBytes) == 0 {
+			continue
+		}
 		if inputBytes[0] == 4 {
 			break
 		}
